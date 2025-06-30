@@ -1,0 +1,395 @@
+/*Pour le style */
+body {
+    background-color:  #1f1717;
+    color: #f6eadc;
+}
+#boite, h1 {
+	text-align: center;
+	margin-top: 50px;
+	text-transform: uppercase;
+	font-family: "Time new Roman", serif;
+}
+hr {
+	margin: 20px auto; 
+	width: 80%; 
+	border: 3px solid #ce5a67;
+}
+nav {
+	border-bottom: 3px solid #ce5a67;
+	height: 60px;
+	background-color: #1f1717;
+	position: sticky;
+	bottom: 0px; /*on deplace de 10px vers le bas , si on veut faire descendre on utilise "top"*/
+}
+/* Liste du menu */
+nav ul {
+    list-style-type: none; /* Supprime les puces */
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+/* Style des éléments de la liste */
+nav ul li {
+    margin: 0 20px; /* Espacement horizontal entre les liens */
+}
+p{
+	color: white;
+}
+
+/* Style du paragraphe */
+.intro-text {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #1F1717;
+}
+
+nav ul li a {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 15px 20px; /* Marges internes pour agrandir les clics */
+    color: #f6eadc; /* Texte clair */
+    text-decoration: none; /* Supprime le soulignement */
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Effet fluide au survol */
+}
+
+/* Style au survol */
+nav ul li a:hover {
+    background-color: #ce5a67; /* Couleur de fond au survol */
+    color: #1f1717; /* Texte sombre au survol */
+    border-radius: 5px; /* Coins arrondis pour l'effet */
+}
+
+.carousel-inner img {
+  max-width: 90%; 
+  max-height: 700px; 
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.layout {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Ajoute de l'espace entre les éléments */
+    gap: 20px; /* Espacement entre le main et le sidebar */
+    max-width: 1200px; /* Largeur maximale pour contenir les deux éléments */
+    margin: 0 auto; /* Centre le conteneur sur la page */
+    padding: 20px;
+}
+
+main {
+	flex: 3;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: #221d1a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #ce5a67;
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    color: #f4bf96;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ce5a67;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f4bf96;
+}
+
+.sidebar {
+    flex: 1; /* L'aside occupe moins d'espace */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #221d1a;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: fit-content;
+}
+.sidebar {
+    position: sticky;
+    top: 20px; /* Distance depuis le haut de la page où l'aside reste collé */
+    align-self: start; /* S'assure que le sticky fonctionne avec flexbox */
+}
+.sidebar h3 {
+    color: #ce5a67;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.sidebar p {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.widget {
+  margin-bottom: 20px;
+}
+
+.contact-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #221d1a;
+    color: #f6eadc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    color: #ce5a67;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #f4bf96;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ce5a67;
+    border-radius: 5px;
+    background-color: #1f1717;
+    color: #f6eadc;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f4bf96;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 153, 102, 0.5);
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ce5a67;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #f4bf96;
+}
+
+h1 {
+	text-align: center;
+	color: #ce5a67;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+	font-size: 18px;
+}
+th, td {
+	text-align: left;
+	padding: 12px;
+	border: 1px solid #ddd;
+	background-color: #1f1717;
+}
+th {
+	background-color: #1f1717;
+	font-weight: bold;
+}
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+section {
+	border : 1px solid black;
+	background-color: #1f1717;
+	width: 50%;
+	margin: 100px auto 0 auto;
+	padding-left: 20px;
+	border-radius: 20px; /*Permet d'arrondir les angles des elements */
+	box-shadow: 10px 10px 100px pink; /*premiere valeur pour l'axe des x , deuxieme valeur pour l'axe des y et troisime valeur pour l'intensité , derniere pour la couleur*/
+}
+
+iframe {
+	width: 100%; /* Occupe toute la largeur de la page */
+	height: 600px; /* Hauteur ajustable pour une meilleure visualisation */
+	border: none; /* Supprime les bordures autour de l'iframe */
+}
+
+main {
+	padding: 20px;
+	max-width: 800px;
+	margin: auto;
+	background: #1f1717;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+main h3 {
+	color: pink;
+	margin-top: 30px;
+}
+main p {
+	margin: 15px 0;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+th, td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+}
+th {
+	background-color: #1f1717;
+	font-weight: bold;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 15px auto;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+footer {
+	text-align: center;
+	padding: 10px;
+	margin-top: 20px;
+	background-color: #1f1717;
+	border-top: 1px solid #1f1717;
+}
+footer a {
+	text-decoration: none;
+	color: pink;
+	font-weight: bold;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1F1717;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.page-title {
+  font-size: 2.5em;
+  text-align: center;
+  color: #CE5A67;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.content-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+
+.content-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text h2 {
+  color: #CE5A67;
+  border-bottom: 2px solid #CE5A67;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.text ul {
+  padding-left: 20px;
+}
+
+.image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.small-img {
+  width: 60%; /* ou 50%, 300px, selon le rendu souhaité */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
